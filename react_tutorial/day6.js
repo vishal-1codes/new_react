@@ -1,6 +1,6 @@
 /* "react" use for jsx elements print in react code , react-dom use for render() method  that
 can be print the element ( if you use jsx element they you hava import  'react' and if you use render() they you use 
-react-dom */
+react-dom  */
 
 import React from "react";
 import ReactDOM from "react-dom";
