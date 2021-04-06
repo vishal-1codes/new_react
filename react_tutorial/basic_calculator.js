@@ -51,6 +51,7 @@ function sub(a,b){
 
 function div(a,b){
     let division=a/b;
+    division=division.toFixed(2);
     return division;
 }
 
@@ -65,4 +66,6 @@ export {add, sub, div, mult};
  Whene we use export , for multiple functon can be export one time ,
  so that time we use function name with { function name,function name ,function name}; 
  with divided by , quama.
+ when we have only 2 pointes after decimal so we use    variable name = varibale name.toFixed(2);
+ that can be use for how much points you have after decimal.
 */
