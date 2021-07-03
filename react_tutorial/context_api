@@ -1,0 +1,85 @@
+// index.jsx
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import One from './One';
+//import ValiationFor from './xyz';
+
+import reportWebVitals from './reportWebVitals';
+
+ReactDOM.render(
+  <React.StrictMode>
+    <One/>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
+
+
+//One.jsx
+import React, { createContext } from 'react';
+import Two from './Two';
+
+
+const VaName = createContext();
+const PaName = createContext();
+
+const One=()=>{
+
+
+
+    return(
+        <>
+        <VaName.Provider value={"context api"}><PaName.Provider value={"..it Done "}><Two/></PaName.Provider></VaName.Provider>
+        </>
+    )
+}
+
+
+export default One;
+export {VaName};
+export {PaName};
+
+//Two.jsx
+import React from 'react';
+import Three from './Three';
+
+const Two=()=>{
+    return(
+        <>
+        <Three/>
+        </>
+    )
+}
+
+
+export default Two;
+
+//Three.jsx
+import React from 'react';
+import { VaName } from './One';
+import { PaName } from './One';
+const Three=()=>{
+    return(
+        <>
+        <VaName.Consumer>{(fname)=>{
+          return (
+              <PaName.Consumer>{
+                  (lname)=>{
+                return <h1>{fname} learn vishal pawar {lname}</h1>
+                  }
+              }</PaName.Consumer>
+          ) 
+        }}</VaName.Consumer>
+        </>
+    )
+}
+
+
+export default Three;
