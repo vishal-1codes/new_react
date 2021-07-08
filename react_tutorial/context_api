@@ -1,3 +1,7 @@
+//You can call multiple components  using one single jsx file . it simple for print words before and after or you want wheter they print
+//middle of text or after or before
+
+
 // index.jsx
 
 import React from 'react';
